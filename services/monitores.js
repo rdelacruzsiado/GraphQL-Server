@@ -16,6 +16,10 @@ class MonitorService {
 
     return monitores;
   }
+
+  async createMonitor(name) {
+    return await monitorModel.create({ nombre: name });
+  }
 }
 
 module.exports = MonitorService;

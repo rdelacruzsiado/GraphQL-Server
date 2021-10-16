@@ -7,3 +7,11 @@ type Query {
   monitor(id: ID!): Monitor!
   monitores: [Monitor!]!
 }
+
+input CrearMonitorInput {
+  nombre: String!
+}
+
+type Mutation {
+  crearMonitor(input: CrearMonitorInput!): Monitor!
+}

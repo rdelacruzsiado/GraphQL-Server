@@ -9,6 +9,11 @@ const resolvers = {
     monitor: (_, { id }) => monitorService.getOne(id),
     monitores: () => monitorService.getAll(),
   },
+  Mutation: {
+    crearMonitor: async (_, { input: { nombre } }) => {
+      return await monitorService.createMonitor(nombre);
+    }
+  }
 };
 
 module.exports = resolvers;
